@@ -33,4 +33,41 @@ document.addEventListener('DOMContentLoaded', function () {
     render();
     setInterval(render, 1000);
   }
+
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!reduceMotion && 'IntersectionObserver' in window) {
+    var items = document.querySelectorAll(
+      '.card, .pillar, .timeline .step, .phase-card, .stat-strip .stat'
+    );
+    items.forEach(function (el, i) {
+      el.classList.add('reveal');
+      el.style.transitionDelay = (Math.min(i % 6, 5) * 70) + 'ms';
+    });
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    items.forEach(function (el) { observer.observe(el); });
+  }
+
+  var tabBtns = document.querySelectorAll('.tab-btn');
+  if (tabBtns.length) {
+    var tabPanels = document.querySelectorAll('.tab-panel');
+    tabBtns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var target = btn.getAttribute('data-tab');
+        tabBtns.forEach(function (b) {
+          b.classList.toggle('active', b === btn);
+          b.setAttribute('aria-selected', b === btn ? 'true' : 'false');
+        });
+        tabPanels.forEach(function (panel) {
+          panel.classList.toggle('active', panel.getAttribute('data-panel') === target);
+        });
+      });
+    });
+  }
 });

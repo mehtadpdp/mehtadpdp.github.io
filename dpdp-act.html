@@ -30,7 +30,7 @@
   <div class="container">
     <span class="eyebrow">Understanding the Law</span>
     <h1>The DPDP Act, 2023 &amp; the DPDP Rules, 2025</h1>
-    <p>Everything an organisation needs to know about what's now law, when it bites, and what it costs to get wrong.</p>
+    <p>Key dates, applicability and the penalty schedule under India's data protection law.</p>
   </div>
 </section>
 
@@ -40,26 +40,21 @@
       <div>
         <span class="eyebrow">Overview</span>
         <h2>A staggered commencement, with a hard deadline</h2>
-        <p>The DPDP Act, 2023 has been on the books for a while, but it only started to bite once the DPDP Rules
-          were notified on <strong>13 November 2025</strong> (G.S.R. 846(E)). That notification switched the law on
-          in stages rather than all at once, and the Data Protection Board of India — the body that will actually
-          enforce it — is now up and running.</p>
-        <p>The obligations that matter most day to day — how you take consent, the security you're required to
-          keep in place, how fast you must report a breach, and how long you're allowed to hold someone's data —
-          all become mandatory on <strong>13 May 2027</strong>. There's no grace period built in after that date.</p>
-        <p>That sounds like a long runway, but it isn't. Getting an organisation genuinely ready — finding the
-          data, fixing the gaps, and making the new habits stick — routinely takes the better part of a year,
-          sometimes longer. And the law doesn't stop at India's borders: a company based anywhere in the world is
-          covered the moment it offers goods or services to people in India. This is fundamentally a Board-level
-          governance question, not something that can be handed entirely to IT.</p>
+        <p>The DPDP Rules, 2025 were notified on <strong>13 November 2025</strong> (G.S.R. 846(E)), bringing the
+          DPDP Act, 2023 into force in stages. The Data Protection Board of India is constituted and operational.</p>
+        <p>Substantive obligations — notice and consent, security safeguards, breach reporting, retention and
+          erasure, and Data Principal rights — take effect on <strong>13 May 2027</strong>, with no grace period
+          thereafter. A complete compliance programme typically requires nine to eighteen months. The Act applies
+          to any entity processing digital personal data in India, and to entities outside India offering goods or
+          services to Data Principals in India.</p>
       </div>
       <div class="callout">
         <h4>Who Must Comply</h4>
         <ul>
-          <li>Any <strong>Data Fiduciary</strong> — meaning any organisation that decides why and how digital personal data gets processed, whether it does so alone or jointly.</li>
-          <li>Any <strong>Data Processor</strong> working on a Fiduciary's behalf — Section 8(2) keeps liability with the Fiduciary no matter what the vendor contract promises.</li>
-          <li><strong>Foreign entities</strong> too, wherever they are based, if they offer goods or services to people in India (Section 3).</li>
-          <li>Firms designated <strong>Significant Data Fiduciaries</strong> under Section 10 face a heavier compliance load under Rule 13.</li>
+          <li><strong>Data Fiduciaries</strong> — any person who determines the purpose and means of processing digital personal data.</li>
+          <li><strong>Data Processors</strong> — Section 8(2) retains liability with the Fiduciary regardless of contractual terms.</li>
+          <li><strong>Foreign entities</strong> offering goods or services to Data Principals in India (Section 3).</li>
+          <li><strong>Significant Data Fiduciaries</strong>, once notified under Section 10, carry additional obligations under Rule 13.</li>
         </ul>
       </div>
     </div>
@@ -75,19 +70,19 @@
     <div class="timeline">
       <div class="step">
         <div class="date">13 Nov 2025</div>
-        <div class="desc">The DPDP Rules go live (G.S.R. 846(E)) and the Data Protection Board of India starts functioning.</div>
+        <div class="desc">DPDP Rules notified (G.S.R. 846(E)). Data Protection Board of India operational.</div>
       </div>
       <div class="step">
         <div class="date">13 Nov 2026</div>
-        <div class="desc">Organisations can begin registering as Consent Managers.</div>
+        <div class="desc">Consent Manager registration opens.</div>
       </div>
       <div class="step">
         <div class="date">13 May 2027</div>
-        <div class="desc">The core obligations kick in for everyone — consent, security safeguards, breach reporting, retention limits and Data Principal rights — with no grace period after.</div>
+        <div class="desc">Full compliance required — consent, security safeguards, breach reporting, retention limits and Data Principal rights. No grace period.</div>
       </div>
       <div class="step penalty">
         <div class="date">₹250 Cr</div>
-        <div class="desc">The single largest penalty the Board can impose for one contravention — and a serious incident can trigger more than one at once.</div>
+        <div class="desc">Maximum penalty per contravention. Exposure is cumulative across multiple heads.</div>
       </div>
     </div>
   </div>
@@ -98,342 +93,112 @@
     <div class="section-head">
       <span class="eyebrow">In Detail</span>
       <h2>The Act, Section by Section</h2>
-      <p>Five groups of obligations, from the initial diagnostic through to what happens once you're designated a
-        Significant Data Fiduciary. Expand each to see what it actually involves.</p>
+      <p>Five groups of obligations, from initial diagnostic to Significant Data Fiduciary requirements.</p>
     </div>
-    <div class="accordion">
+    <div class="tabs-nav" role="tablist">
+      <button class="tab-btn active" type="button" data-tab="a" role="tab" aria-selected="true">
+        <span class="tab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
+        A · Readiness &amp; Gap Assessment
+      </button>
+      <button class="tab-btn" type="button" data-tab="b" role="tab" aria-selected="false">
+        <span class="tab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span>
+        B · Implementation &amp; Documentation
+      </button>
+      <button class="tab-btn" type="button" data-tab="c" role="tab" aria-selected="false">
+        <span class="tab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+        C · Significant Data Fiduciary
+      </button>
+      <button class="tab-btn" type="button" data-tab="d" role="tab" aria-selected="false">
+        <span class="tab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg></span>
+        D · Ongoing Compliance
+      </button>
+      <button class="tab-btn" type="button" data-tab="e" role="tab" aria-selected="false">
+        <span class="tab-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></span>
+        E · Specialised Advisory
+      </button>
+    </div>
 
-      <details class="accordion-item" open>
-        <summary>
-          <div class="s-title">
-            <span class="s-letter">A</span>
-            <div>
-              <h3>Readiness &amp; Gap Assessment</h3>
-              <div class="s-desc">Ten workstreams that establish where you stand before 13 May 2027</div>
-            </div>
-          </div>
-          <span class="plus">+</span>
-        </summary>
-        <div class="accordion-body">
-          <div class="accordion-sub">
-            <h4>01 &nbsp;Applicability &amp; Scoping Assessment</h4>
-            <ul>
-              <li>Working out whether an organisation is a Data Fiduciary, a Data Processor, or both — and which
-                processing activities actually fall under the Act.</li>
-              <li>Checking exposure under Section 3, the extra-territorial provision that pulls in any entity
-                outside India offering goods or services to people here.</li>
-              <li>Seeing how DPDP sits alongside obligations already owed to RBI, SEBI, IRDAI or TRAI, and the IT
-                Act / SPDI Rules that remain in force until DPDP's core provisions take effect.</li>
-              <li>Flagging early whether an entity is likely to be designated a Significant Data Fiduciary under
-                Section 10.</li>
-            </ul>
-          </div>
-          <div class="accordion-sub">
-            <h4>02 &nbsp;Data Discovery, Inventory &amp; Mapping</h4>
-            <p class="kicker">You can't protect data you haven't found — this is the groundwork everything else rests on.</p>
-            <ul>
-              <li>Building a genuinely complete inventory of personal data across systems, applications, vendors
-                and the odd physical record that's never made it into a spreadsheet.</li>
-              <li>Mapping how that data actually moves — collection, processing, storage, sharing, transfer, disposal.</li>
-              <li>Calling out children's data, data belonging to persons with disabilities, and any other
-                high-risk processing along the way.</li>
-            </ul>
-          </div>
-          <div class="accordion-sub">
-            <h4>03 &nbsp;Gap Assessment &amp; Compliance Diagnostic</h4>
-            <p class="kicker">A line-by-line check against what the Act and Rules actually require.</p>
-            <ul>
-              <li>Testing current practice against every operative obligation in the DPDP Act and Rules.</li>
-              <li>Reading through existing privacy notices, consent flows, policies, contracts and security controls.</li>
-              <li>Producing a gap register with each item risk-rated, so it's clear what's urgent and what can wait.</li>
-              <li>A prioritised remediation roadmap, not just a list of problems.</li>
-            </ul>
-          </div>
-          <div class="accordion-sub">
-            <h4>04 &nbsp;Notice &amp; Consent Architecture</h4>
-            <p class="kicker">Most existing consent flows won't clear the bar the Rules now set.</p>
-            <ul>
-              <li>Standalone, plain-language privacy notices, in English and the languages listed in the Eighth Schedule.</li>
-              <li>Checking that consent is actually free, specific, informed, unconditional and unambiguous,
-                captured through a clear affirmative action rather than a pre-ticked box.</li>
-              <li>Making withdrawal genuinely as easy as giving consent, and working out how to re-consent people
-                whose data is already held.</li>
-              <li>The legitimate-use grounds under Section 7, for cases where consent isn't the basis at all.</li>
-            </ul>
-          </div>
-          <div class="accordion-sub">
-            <h4>05 &nbsp;Data Principal Rights &amp; Grievance Redressal</h4>
-            <p class="kicker">Turning Sections 11–14 and Rule 14 into something a support team can actually run.</p>
-            <ul>
-              <li>How requests for access, correction, completion, updating, erasure and nomination actually get
-                handled end to end.</li>
-              <li>A grievance process that closes complaints within the timelines the law sets.</li>
-            </ul>
-          </div>
-          <div class="accordion-sub">
-            <h4>06 &nbsp;Security Safeguards &amp; Breach Readiness</h4>
-            <p class="kicker">This is where the biggest penalties live — Rule 6 on safeguards and Rule 7's breach clock.</p>
-            <ul>
-              <li>The minimum safeguards the Rules expect: encryption, obfuscation, masking or tokenisation,
-                access control, ongoing monitoring, and continuity planning.</li>
-              <li>A breach-response playbook that gets word to affected people "without delay" and a full report
-                to the Board inside 72 hours of the organisation becoming aware.</li>
-              <li>There's no materiality threshold — every breach is reportable, however small it looks.</li>
-            </ul>
-          </div>
-          <div class="accordion-sub">
-            <h4>07 &nbsp;Retention, Erasure &amp; Logging</h4>
-            <p class="kicker">Rule 8, read together with the Third Schedule.</p>
-            <ul>
-              <li>Retention periods tied to the actual purpose data was collected for, with erasure that triggers
-                automatically once consent is withdrawn or the purpose is served.</li>
-            </ul>
-          </div>
-          <div class="accordion-sub">
-            <h4>08 &nbsp;Children's &amp; Disability Data</h4>
-            <p class="kicker">Section 9 and the Fourth Schedule — up to ₹200 crore in exposure if this goes wrong.</p>
-            <ul>
-              <li>How parental consent is verified and how age is assured in practice.</li>
-              <li>The ban on tracking, behavioural monitoring and targeted advertising aimed at children.</li>
-              <li>Consent from a lawful guardian, properly obtained for persons with disabilities.</li>
-            </ul>
-          </div>
-          <div class="accordion-sub">
-            <h4>09 &nbsp;Processor &amp; Vendor Contract Management</h4>
-            <p class="kicker">Section 8(2) means liability for a processor's mistake doesn't disappear just because the work was outsourced.</p>
-            <ul>
-              <li>Reviewing and redlining processor agreements, cloud contracts and outsourcing arrangements.</li>
-              <li>DPDP-ready data processing addenda covering safeguards, sub-processing, breach reporting, audit
-                rights, and what happens to the data on exit.</li>
-              <li>Vendor risk assessments and due-diligence questionnaires.</li>
-              <li>Approval protocols for onward transfers and sub-processors.</li>
-            </ul>
-          </div>
-          <div class="accordion-sub">
-            <h4>10 &nbsp;Cross-Border Transfer &amp; Sectoral Overlay</h4>
-            <p class="kicker">Section 16 works on a negative list — but a sectoral regulator may still be stricter.</p>
-            <ul>
-              <li>Transfers outside India and the restrictions that apply to specific notified countries.</li>
-              <li>Localisation rules that survive independently of DPDP — RBI payment-data localisation, the
-                Digital Lending Directions, and IRDAI or SEBI requirements.</li>
-              <li>The extra localisation duties that apply once an entity is a Significant Data Fiduciary under
-                Rule 13(4).</li>
-              <li>Transfer-impact assessments and contractual protections for offshore group entities and vendors.</li>
-            </ul>
-          </div>
-          <div class="deliverables">
-            <h4>Typical Outputs</h4>
-            <ul>
-              <li>DPDP Applicability &amp; Scoping Note</li>
-              <li>Data Inventory</li>
-              <li>Risk-rated Gap Assessment Report</li>
-              <li>Remediation Roadmap</li>
-            </ul>
-          </div>
-        </div>
-      </details>
+    <div class="tab-panels">
 
-      <details class="accordion-item">
-        <summary>
-          <div class="s-title">
-            <span class="s-letter">B</span>
-            <div>
-              <h3>Implementation &amp; Documentation</h3>
-              <div class="s-desc">The paper trail an auditor or the Board will actually ask to see</div>
-            </div>
-          </div>
-          <span class="plus">+</span>
-        </summary>
-        <div class="accordion-body">
-          <p>Under DPDP, compliance is only as real as the paperwork behind it. A complete programme typically runs
-            to the following documents:</p>
-          <div class="grid-2">
-            <ul>
-              <li>Privacy Policy and Data Protection Policy</li>
-              <li>Standalone privacy notices and consent artefacts (web, app, onboarding, offline-to-digital)</li>
-              <li>Record of Processing Activities (RoPA) and data-flow maps</li>
-              <li>Data Retention and Erasure Policy with retention schedule</li>
-              <li>Incident Response and Breach Notification Plan, with Board and Data Principal intimation templates</li>
-              <li>Data Principal Rights Request Handling Procedure and grievance-redressal charter</li>
-            </ul>
-            <ul>
-              <li>Data Processing Agreements and vendor addenda</li>
-              <li>Children's Data and Age-Assurance Policy</li>
-              <li>Cross-Border Transfer Policy and transfer register</li>
-              <li>DPIA framework, templates and completed assessments</li>
-              <li>Access Control, Encryption and Logging Standards</li>
-              <li>Employee awareness training modules and attendance records</li>
-            </ul>
-          </div>
-          <div class="callout" style="margin-top:20px;">
-            <h4>A Note on Evidence</h4>
-            <ul style="margin-bottom:0;">
-              <li>It's the Data Fiduciary's job to prove compliance — not the regulator's job to disprove it.</li>
-              <li>A consent record that can't actually be retrieved when asked is, for all practical purposes, no
-                consent at all.</li>
-              <li>Documentation should be built to be produced on demand, not filed away and forgotten.</li>
-            </ul>
-          </div>
+      <div class="tab-panel active" data-panel="a" role="tabpanel">
+        <div class="tab-panel-head">
+          <h3>Readiness &amp; Gap Assessment</h3>
+          <div class="s-desc">Ten workstreams establishing compliance status ahead of 13 May 2027</div>
         </div>
-      </details>
+        <p>A diagnostic review covering applicability, data mapping, notice and consent, security safeguards and
+          cross-border transfer, resulting in a risk-rated gap assessment and remediation roadmap.</p>
+        <ul>
+          <li>Applicability &amp; scoping assessment</li>
+          <li>Data discovery, inventory &amp; mapping</li>
+          <li>Notice &amp; consent architecture</li>
+          <li>Security safeguards &amp; breach readiness</li>
+        </ul>
+        <a href="readiness-gap-assessment.html" class="btn btn-outline">View More</a>
+      </div>
 
-      <details class="accordion-item">
-        <summary>
-          <div class="s-title">
-            <span class="s-letter">C</span>
-            <div>
-              <h3>Significant Data Fiduciary Obligations</h3>
-              <div class="s-desc">What Rule 13 adds once an entity is notified under Section 10</div>
-            </div>
-          </div>
-          <span class="plus">+</span>
-        </summary>
-        <div class="accordion-body">
-          <div class="grid-2">
-            <div class="accordion-sub">
-              <h4>Data Protection Impact Assessment — Rule 13(1), every twelve months</h4>
-              <ul>
-                <li>A structured DPIA method built for high-risk, large-scale processing</li>
-                <li>Assessing risk to Data Principals and designing ways to mitigate it</li>
-                <li>Reporting significant DPIA findings to the Board</li>
-              </ul>
-            </div>
-            <div class="accordion-sub">
-              <h4>Annual Data Audit — an independent audit, once a year</h4>
-              <ul>
-                <li>Scoping and running a DPDP compliance audit across the full data lifecycle</li>
-                <li>Appointing and coordinating an Independent Data Auditor</li>
-                <li>Preparing the audit report and its findings for the Board</li>
-              </ul>
-            </div>
-            <div class="accordion-sub">
-              <h4>Data Protection Officer</h4>
-              <ul>
-                <li>Appointing a DPO based in India who reports to the Board</li>
-                <li>Defining the DPO's mandate, reporting lines and authority to escalate</li>
-                <li>Publishing the DPO's contact details as the point of contact for grievances</li>
-              </ul>
-            </div>
-            <div class="accordion-sub">
-              <h4>Algorithmic Due Diligence — Rule 13(2)</h4>
-              <ul>
-                <li>Checking that the algorithms behind hosting, display, uploads, edits or sharing of personal
-                  data don't put Data Principals at risk</li>
-                <li>Documenting that check in a form regulators can review</li>
-              </ul>
-            </div>
-          </div>
-          <div class="accordion-sub" style="margin-top:8px;">
-            <h4>Governance &amp; Board Reporting</h4>
-            <ul>
-              <li>The privacy governance structure and internal escalation path</li>
-              <li>Keeping the Board and Audit Committee briefed on DPDP compliance status</li>
-              <li>An evidence trail that shows the Board is actually accountable, not just aware</li>
-            </ul>
-          </div>
+      <div class="tab-panel" data-panel="b" role="tabpanel">
+        <div class="tab-panel-head">
+          <h3>Implementation &amp; Documentation</h3>
+          <div class="s-desc">The evidence trail required by an auditor or the Board</div>
         </div>
-      </details>
+        <p>The complete set of policies, notices, registers and contracts that make a DPDP programme demonstrable,
+          not just documented.</p>
+        <ul>
+          <li>Privacy Policy &amp; standalone notices</li>
+          <li>Record of Processing Activities (RoPA)</li>
+          <li>Data Processing Agreements &amp; vendor addenda</li>
+          <li>DPIA framework and templates</li>
+        </ul>
+        <a href="implementation-documentation.html" class="btn btn-outline">View More</a>
+      </div>
 
-      <details class="accordion-item">
-        <summary>
-          <div class="s-title">
-            <span class="s-letter">D</span>
-            <div>
-              <h3>Staying Compliant, Year on Year</h3>
-              <div class="s-desc">Why DPDP compliance doesn't end when a project closes</div>
-            </div>
-          </div>
-          <span class="plus">+</span>
-        </summary>
-        <div class="accordion-body">
-          <p>New products, new vendors and new processing activities all reopen compliance questions, which is why
-            this tends to run as an ongoing mandate rather than a one-time exercise:</p>
-          <div class="grid-2">
-            <div class="accordion-sub">
-              <h4>Periodic Compliance Management</h4>
-              <ul>
-                <li>The annual DPIA and independent audit for Significant Data Fiduciaries</li>
-                <li>Reviewing notices, consent flows and the RoPA as products and processing evolve</li>
-                <li>Checking retention and erasure cycles against the logs</li>
-                <li>Refreshing vendor and processor contracts and re-running vendor risk checks</li>
-              </ul>
-            </div>
-            <div class="accordion-sub">
-              <h4>Rights &amp; Grievance Desk</h4>
-              <ul>
-                <li>Logging and tracking rights requests against statutory deadlines</li>
-                <li>Keeping the grievance register current and closing complaints inside the 90-day window</li>
-                <li>Handling escalations and any responses the Data Protection Board requires</li>
-              </ul>
-            </div>
-            <div class="accordion-sub">
-              <h4>Breach Response Support</h4>
-              <ul>
-                <li>On-call help classifying a breach and issuing the "without delay" notice to affected people</li>
-                <li>Preparing and filing the detailed 72-hour report to the Board</li>
-                <li>Documenting root cause, remedial steps and follow-up filings</li>
-                <li>Coordinating with CERT-In where its separate six-hour reporting window also applies</li>
-              </ul>
-            </div>
-            <div class="accordion-sub">
-              <h4>Training &amp; Awareness</h4>
-              <ul>
-                <li>Role-based training for engineering, marketing, HR, support and vendor-management teams</li>
-                <li>Briefing the Board and senior management on personal liability and governance exposure</li>
-                <li>Annual refreshers with assessments and documented completion for the record</li>
-              </ul>
-            </div>
-            <div class="accordion-sub">
-              <h4>Regulatory Watch &amp; Board Reporting</h4>
-              <ul>
-                <li>Tracking Board orders, MeitY notifications, SDF designations and sector-specific guidance</li>
-                <li>Quarterly compliance dashboards and a management compliance certificate</li>
-                <li>Flagging the November 2026 and May 2027 activation dates well ahead of time</li>
-              </ul>
-            </div>
-            <div class="accordion-sub">
-              <h4>Annual DPDP Health Check</h4>
-              <ul>
-                <li>Consent and notice integrity, and the lawful basis behind every processing activity</li>
-                <li>Security safeguards, logging and breach preparedness</li>
-                <li>Processor contract coverage and the cross-border transfer register</li>
-                <li>The overall governance framework and whether the evidence trail would hold up to audit</li>
-              </ul>
-            </div>
-          </div>
+      <div class="tab-panel" data-panel="c" role="tabpanel">
+        <div class="tab-panel-head">
+          <h3>Significant Data Fiduciary Obligations</h3>
+          <div class="s-desc">Additional requirements under Rule 13 once notified under Section 10</div>
         </div>
-      </details>
+        <p>Entities notified as Significant Data Fiduciaries carry an elevated compliance architecture, including
+          annual assessment and independent audit.</p>
+        <ul>
+          <li>Annual Data Protection Impact Assessment</li>
+          <li>Independent annual data audit</li>
+          <li>Data Protection Officer appointment</li>
+          <li>Algorithmic due diligence</li>
+        </ul>
+        <a href="significant-data-fiduciary.html" class="btn btn-outline">View More</a>
+      </div>
 
-      <details class="accordion-item">
-        <summary>
-          <div class="s-title">
-            <span class="s-letter">E</span>
-            <div>
-              <h3>Where DPDP Meets Everything Else</h3>
-              <div class="s-desc">Sectoral overlays, deal-making and specialised risk review</div>
-            </div>
-          </div>
-          <span class="plus">+</span>
-        </summary>
-        <div class="accordion-body">
-          <p>DPDP rarely sits in isolation — it interacts with other regulation and with commercial deals. The
-            situations that come up most often beyond the core obligations above:</p>
-          <div class="grid-2">
-            <ul>
-              <li>Sector-specific DPDP overlays for NBFCs and digital lenders (RBI Digital Lending Directions),
-                banking, insurance, healthcare, ed-tech and e-commerce</li>
-              <li>Privacy due diligence in M&amp;A, investment and outsourcing deals</li>
-              <li>GDPR-to-DPDP bridge assessments for multinational groups harmonising a global privacy programme</li>
-            </ul>
-            <ul>
-              <li>Engaging an Independent Data Auditor and defending the resulting audit</li>
-              <li>Representation before, and responses to, the Data Protection Board of India</li>
-              <li>Privacy-by-design review for new products, features and data-monetisation ideas</li>
-              <li>AI and algorithmic-processing risk review under Rule 13(2)</li>
-            </ul>
-          </div>
+      <div class="tab-panel" data-panel="d" role="tabpanel">
+        <div class="tab-panel-head">
+          <h3>Ongoing Compliance</h3>
+          <div class="s-desc">Sustaining compliance as processing, vendors and products change</div>
         </div>
-      </details>
+        <p>DPDP compliance is not a one-time project. This covers the recurring obligations that keep a programme
+          current year on year.</p>
+        <ul>
+          <li>Periodic compliance management</li>
+          <li>Rights &amp; grievance desk</li>
+          <li>Breach response support</li>
+          <li>Regulatory watch &amp; Board reporting</li>
+        </ul>
+        <a href="ongoing-compliance.html" class="btn btn-outline">View More</a>
+      </div>
+
+      <div class="tab-panel" data-panel="e" role="tabpanel">
+        <div class="tab-panel-head">
+          <h3>Specialised Advisory</h3>
+          <div class="s-desc">Sectoral overlays, transactions and specialised risk review</div>
+        </div>
+        <p>Situations where DPDP intersects with sectoral regulation, M&amp;A activity, and global privacy
+          programmes.</p>
+        <ul>
+          <li>Sector-specific DPDP overlays</li>
+          <li>Privacy due diligence in M&amp;A</li>
+          <li>GDPR-to-DPDP bridge assessments</li>
+          <li>Independent Data Auditor engagement</li>
+        </ul>
+        <a href="specialised-advisory.html" class="btn btn-outline">View More</a>
+      </div>
 
     </div>
   </div>
@@ -444,8 +209,7 @@
     <div class="section-head">
       <span class="eyebrow">The Cost of Getting It Wrong</span>
       <h2>Penalties Under the Schedule to the Act</h2>
-      <p>Penalties are assessed per contravention, and a single incident can trigger more than one of the heads
-        below at the same time — so the numbers stack.</p>
+      <p>Penalties are assessed per contravention. A single incident may attract more than one head.</p>
     </div>
     <div style="overflow-x:auto;">
       <table class="penalty-table">
@@ -461,21 +225,18 @@
         </tbody>
       </table>
     </div>
-    <p style="margin-top:16px;font-size:0.92rem;">The Board doesn't apply these maximums automatically — it weighs
-      how serious the breach was, what kind of data was involved, whether it's happened before, what the
-      organisation gained or avoided losing, and what it did to fix things afterward. In practice, that means a
-      well-documented, good-faith compliance effort can genuinely bring the number down, even after something has
-      gone wrong.</p>
+    <p style="margin-top:16px;font-size:0.92rem;">The Board considers the nature and gravity of the breach, the
+      type of personal data affected, its repetitive character, gain realised or loss avoided, and remedial action
+      taken in determining quantum. A documented compliance programme is a mitigating factor.</p>
   </div>
 </section>
 
 <section class="cta-band">
   <div class="container">
-    <h2>The Clock Is Running. Find Out Where You Stand.</h2>
-    <p>A short conversation with our Data Protection &amp; Privacy team is the fastest way to see how much work lies ahead.</p>
+    <h2>Speak With Our Data Protection &amp; Privacy Team</h2>
     <div class="hero-actions">
-      <a href="contact.html" class="btn btn-primary">Contact Our Privacy Team</a>
-      <a href="services.html" class="btn btn-outline">See How We Help</a>
+      <a href="contact.html" class="btn btn-primary">Contact Us</a>
+      <a href="services.html" class="btn btn-outline">Our Services</a>
     </div>
   </div>
 </section>
