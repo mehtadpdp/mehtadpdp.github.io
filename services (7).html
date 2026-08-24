@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services | Mehta & Mehta DPDP Advisory</title>
+<meta name="description" content="Data protection advisory services under the DPDP Act, 2023 — readiness assessments, documentation, Significant Data Fiduciary advisory and ongoing compliance retainership from Mehta & Mehta.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy-900:#0B1F3A;
+    --navy-700:#15335E;
+    --ink:#1C2430;
+    --ink-soft:#4A5568;
+    --paper:#FAF9F6;
+    --paper-dim:#F1EFE8;
+    --line:#E3E0D6;
+    --gold:#A9822F;
+    --gold-deep:#8A6A22;
+    --gold-tint:#F4EBD3;
+    --white:#FFFFFF;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter',system-ui,sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{
+    font-family:'Source Serif 4', Georgia, serif;
+    color:var(--navy-900);
+    margin:0;
+    font-weight:600;
+    letter-spacing:-0.01em;
+  }
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 28px;}
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--gold-deep);
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:14px;
+  }
+  .eyebrow::before{content:"";width:22px;height:1px;background:var(--gold-deep);display:inline-block;}
+
+  /* ---------- Header ---------- */
+  header{
+    background:var(--navy-900);
+    position:sticky; top:0; z-index:50;
+    border-bottom:1px solid rgba(255,255,255,0.08);
+  }
+  .nav{
+    max-width:1120px;margin:0 auto;padding:0 28px;
+    display:flex;align-items:center;justify-content:space-between;
+    height:72px;
+  }
+  .brand{
+    font-family:'Source Serif 4',serif;
+    color:var(--white);
+    font-size:17px;
+    font-weight:600;
+    letter-spacing:0.02em;
+  }
+  .brand span{color:var(--gold);}
+  .navlinks{display:flex;gap:30px;align-items:center;}
+  .navlinks a{
+    color:rgba(255,255,255,0.72);
+    font-size:14.5px;
+    font-weight:500;
+    transition:color .15s ease;
+  }
+  .navlinks a:hover{color:var(--white);}
+  .navlinks a.active{color:var(--gold);}
+  .nav-cta{
+    background:var(--gold);
+    color:var(--navy-900) !important;
+    padding:9px 18px;
+    border-radius:3px;
+    font-size:14px;
+    font-weight:600;
+  }
+  .nav-cta:hover{background:#BE9A45;}
+  .mobile-toggle{display:none;}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    background:linear-gradient(180deg, var(--navy-900) 0%, #0E2647 100%);
+    color:var(--white);
+    padding:68px 0 84px;
+  }
+  .hero .eyebrow{color:var(--gold);}
+  .hero .eyebrow::before{background:var(--gold);}
+  .hero h1{
+    color:var(--white);
+    font-size:44px;
+    line-height:1.14;
+    max-width:760px;
+  }
+  .hero p.lead{
+    max-width:640px;
+    color:rgba(255,255,255,0.78);
+    font-size:17px;
+    margin-top:18px;
+  }
+  .hero-cta-row{display:flex;gap:14px;margin-top:32px;flex-wrap:wrap;}
+  .btn-primary{
+    background:var(--gold);
+    color:var(--navy-900);
+    padding:13px 24px;
+    border-radius:3px;
+    font-weight:600;
+    font-size:14.5px;
+    display:inline-block;
+  }
+  .btn-primary:hover{background:#BE9A45;}
+  .btn-ghost{
+    border:1px solid rgba(255,255,255,0.32);
+    color:var(--white);
+    padding:12px 23px;
+    border-radius:3px;
+    font-weight:500;
+    font-size:14.5px;
+    display:inline-block;
+  }
+  .btn-ghost:hover{border-color:rgba(255,255,255,0.6);}
+
+  /* ---------- Section shell ---------- */
+  section{padding:76px 0;}
+  section.tight{padding:56px 0;}
+  .divider{border:none;border-top:1px solid var(--line);}
+  section h2{font-size:30px;max-width:620px;}
+  section p.section-lead{color:var(--ink-soft);max-width:640px;margin-top:12px;font-size:15.5px;}
+
+  /* ---------- Fit finder (signature element) ---------- */
+  .fit{background:var(--white);border:1px solid var(--line);border-radius:6px;overflow:hidden;}
+  .fit-head{padding:26px 28px;border-bottom:1px solid var(--line);background:var(--paper-dim);}
+  .fit-head h3{font-size:19px;}
+  .fit-head p{margin:6px 0 0;color:var(--ink-soft);font-size:14.5px;}
+  .fit-grid{display:grid;grid-template-columns:repeat(4,1fr);}
+  .fit-cell{
+    padding:24px 22px;
+    border-right:1px solid var(--line);
+    border-top:1px solid var(--line);
+  }
+  .fit-cell:last-child{border-right:none;}
+  .fit-cell .stage{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11px;letter-spacing:0.08em;text-transform:uppercase;
+    color:var(--gold-deep);margin-bottom:10px;display:block;
+  }
+  .fit-cell h4{font-size:15.5px;line-height:1.3;margin-bottom:8px;}
+  .fit-cell p{font-size:13.5px;color:var(--ink-soft);margin:0 0 12px;}
+  .fit-cell a{
+    font-size:13px;font-weight:600;color:var(--gold-deep);
+    border-bottom:1px solid var(--gold-tint);
+  }
+  .fit-cell a:hover{border-color:var(--gold-deep);}
+
+  /* ---------- Service type legend ---------- */
+  .legend{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px;}
+  .tag{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11px;letter-spacing:0.05em;text-transform:uppercase;
+    padding:5px 11px;border-radius:20px;
+    display:inline-flex;align-items:center;gap:6px;
+    border:1px solid transparent;
+  }
+  .tag::before{content:"";width:6px;height:6px;border-radius:50%;display:inline-block;}
+  .tag-assessment{background:#EAF1F8;color:#1F4E79;}
+  .tag-assessment::before{background:#1F4E79;}
+  .tag-implementation{background:var(--gold-tint);color:var(--gold-deep);}
+  .tag-implementation::before{background:var(--gold-deep);}
+  .tag-advisory{background:#EAF3ED;color:#256B4A;}
+  .tag-advisory::before{background:#256B4A;}
+  .tag-retainer{background:#F4EAF2;color:#7A3970;}
+  .tag-retainer::before{background:#7A3970;}
+
+  /* ---------- Service blocks ---------- */
+  .service{
+    display:grid;grid-template-columns:280px 1fr;gap:40px;
+    padding:40px 0;border-top:1px solid var(--line);
+  }
+  .service:last-child{border-bottom:1px solid var(--line);}
+  .service-meta .idx{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;color:var(--ink-soft);letter-spacing:0.05em;
+    display:block;margin-bottom:10px;
+  }
+  .service-meta h3{font-size:22px;line-height:1.28;margin-bottom:12px;}
+  .service-body p.summary{color:var(--ink-soft);font-size:15px;margin:0 0 20px;max-width:560px;}
+  .deliverables{
+    display:grid;grid-template-columns:1fr 1fr;gap:10px 28px;
+    list-style:none;margin:0;padding:0;
+  }
+  .deliverables li{
+    font-size:14.5px;color:var(--ink);
+    padding-left:18px;position:relative;
+  }
+  .deliverables li::before{
+    content:"";position:absolute;left:0;top:9px;
+    width:7px;height:1.5px;background:var(--gold-deep);
+  }
+  @media (max-width:820px){
+    .deliverables{grid-template-columns:1fr;}
+    .service{grid-template-columns:1fr;gap:16px;}
+  }
+
+  /* ---------- Capability grid ---------- */
+  .cap-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
+    background:var(--line);border:1px solid var(--line);margin-top:36px;
+  }
+  .cap-card{
+    background:var(--white);padding:26px 24px;
+    display:flex;flex-direction:column;gap:12px;
+  }
+  .cap-card h4{font-size:16px;line-height:1.3;}
+  .cap-card p{font-size:13.5px;color:var(--ink-soft);margin:0;flex-grow:1;}
+  @media (max-width:900px){.cap-grid{grid-template-columns:1fr 1fr;}}
+  @media (max-width:620px){.cap-grid{grid-template-columns:1fr;}}
+
+  /* ---------- Why row ---------- */
+  .why-row{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-top:36px;}
+  .why-row .item{border-top:2px solid var(--gold);padding-top:16px;}
+  .why-row h4{font-size:15.5px;margin-bottom:8px;}
+  .why-row p{font-size:13.5px;color:var(--ink-soft);margin:0;}
+  @media (max-width:820px){.why-row{grid-template-columns:1fr 1fr;}}
+
+  /* ---------- CTA band ---------- */
+  .cta-band{
+    background:var(--navy-900);color:var(--white);
+    border-radius:8px;padding:46px 44px;
+    display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;
+  }
+  .cta-band h3{color:var(--white);font-size:24px;max-width:440px;}
+  .cta-band p{color:rgba(255,255,255,0.72);margin:8px 0 0;font-size:14.5px;max-width:440px;}
+  .cta-actions{display:flex;gap:12px;flex-wrap:wrap;}
+
+  /* ---------- Footer ---------- */
+  footer{background:var(--navy-900);color:rgba(255,255,255,0.65);padding:56px 0 28px;margin-top:20px;}
+  .foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1.2fr;gap:40px;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,0.1);}
+  .foot-grid h5{color:var(--white);font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:16px;font-weight:500;}
+  .foot-grid a{display:block;color:rgba(255,255,255,0.65);font-size:14px;margin-bottom:10px;}
+  .foot-grid a:hover{color:var(--white);}
+  .foot-brand{color:var(--white);font-family:'Source Serif 4',serif;font-size:17px;margin-bottom:10px;}
+  .foot-tag{font-size:13.5px;max-width:280px;}
+  .foot-bottom{padding-top:22px;font-size:12.5px;color:rgba(255,255,255,0.45);line-height:1.7;}
+  @media (max-width:820px){.foot-grid{grid-template-columns:1fr;}}
+
+  @media (max-width:900px){
+    .navlinks{display:none;}
+    .hero h1{font-size:32px;}
+    .fit-grid{grid-template-columns:1fr 1fr;}
+    .fit-cell{border-right:none;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a class="brand" href="index.html">MEHTA <span>&amp;</span> MEHTA <span style="color:rgba(255,255,255,.5);font-weight:400;font-size:13px;">Company Secretaries</span></a>
+    <nav class="navlinks">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a class="active" href="services.html">Services</a>
+      <a href="dpdp-act.html">The DPDP Act</a>
+      <a href="engagement.html">Engagement Model</a>
+      <a href="faq.html">FAQ</a>
+      <a class="nav-cta" href="contact.html">Contact Us</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Services</div>
+    <h1>Data protection advisory services, scoped to where you are in the DPDP journey</h1>
+    <p class="lead">From first gap assessment to Board reporting after go-live, Mehta & Mehta advises on the Digital Personal Data Protection Act, 2023 as a governance obligation — not a one-off IT project. Engage a single service or the full compliance lifecycle.</p>
+    <div class="hero-cta-row">
+      <a class="btn-primary" href="contact.html">Request a Gap Assessment</a>
+      <a class="btn-ghost" href="engagement.html">See How Engagements Are Structured</a>
+    </div>
+  </div>
+</section>
+
+<section class="tight">
+  <div class="wrap">
+    <div class="eyebrow">Find Your Starting Point</div>
+    <h2>Which service fits where you are today?</h2>
+    <p class="section-lead">Most organisations enter at one of four points. Use this to find yours — every path can be engaged on its own or carried through to the 13 May 2027 deadline and beyond.</p>
+
+    <div class="fit" style="margin-top:32px;">
+      <div class="fit-grid">
+        <div class="fit-cell">
+          <span class="stage">Stage 01</span>
+          <h4>"We haven't assessed our exposure yet"</h4>
+          <p>Start with Readiness &amp; Gap Assessment to establish whether you're a Fiduciary, Processor or both, and where the gaps sit.</p>
+          <a href="#readiness">View this service ↓</a>
+        </div>
+        <div class="fit-cell">
+          <span class="stage">Stage 02</span>
+          <h4>"We know the gaps, we need the paperwork and workflows built"</h4>
+          <p>Move to Policy, Notice &amp; Consent Architecture to convert findings into an audit-ready documentation suite.</p>
+          <a href="#documentation">View this service ↓</a>
+        </div>
+        <div class="fit-cell">
+          <span class="stage">Stage 03</span>
+          <h4>"We expect to be notified as a Significant Data Fiduciary"</h4>
+          <p>Rule 13 brings added obligations — DPIA, independent audit and a Data Protection Officer. Plan for it early.</p>
+          <a href="#sdf">View this service ↓</a>
+        </div>
+        <div class="fit-cell">
+          <span class="stage">Stage 04</span>
+          <h4>"We're compliant — now it has to hold up"</h4>
+          <p>Ongoing Compliance Retainership keeps notices, vendors and Board reporting current as processing evolves.</p>
+          <a href="#retainer">View this service ↓</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="legend">
+      <span style="font-size:13px;color:var(--ink-soft);margin-right:4px;">Service types used on this page:</span>
+      <span class="tag tag-assessment">Assessment</span>
+      <span class="tag tag-implementation">Implementation</span>
+      <span class="tag tag-advisory">Advisory</span>
+      <span class="tag tag-retainer">Retainer</span>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section id="readiness">
+  <div class="wrap">
+    <div class="eyebrow">What We Do</div>
+    <h2>Our Service Lines</h2>
+    <p class="section-lead">Seven services, each independently engageable. Every deliverable is prepared to withstand review by an Independent Data Auditor or the Board.</p>
+
+    <div class="service">
+      <div class="service-meta">
+        <span class="idx">Service Line 01</span>
+        <span class="tag tag-assessment">Assessment</span>
+        <h3>Readiness &amp; Gap Assessment</h3>
+      </div>
+      <div class="service-body">
+        <p class="summary">A diagnostic review of current data-handling practice against the DPDP Act and the Rules, resulting in a risk-rated, Board-ready roadmap rather than a generic checklist.</p>
+        <ul class="deliverables">
+          <li>Applicability &amp; entity scoping (Fiduciary / Processor / SDF exposure)</li>
+          <li>Gap assessment mapped clause-by-clause to the Act and Rules</li>
+          <li>Risk-rated findings report with remediation priority</li>
+          <li>Board-approved roadmap with realistic sequencing to May 2027</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="service" id="documentation">
+      <div class="service-meta">
+        <span class="idx">Service Line 02</span>
+        <span class="tag tag-implementation">Implementation</span>
+        <h3>Policy, Notice &amp; Consent Architecture</h3>
+      </div>
+      <div class="service-body">
+        <p class="summary">Converts assessment findings into the actual notices, policies and consent flows your organisation runs on — drafted to be usable by product, legal and customer-facing teams alike.</p>
+        <ul class="deliverables">
+          <li>Data mapping — personal data discovery and processing inventory, including the baseline Record of Processing Activities (RoPA)</li>
+          <li>Data Principal-facing notices, in plain and itemised form</li>
+          <li>Consent architecture, including Consent Manager readiness</li>
+          <li>Internal data protection policy and standard operating procedures</li>
+          <li>Data Processor and vendor contract clauses (Section 8(2) alignment)</li>
+          <li>Rights-fulfilment and grievance-redressal workflow design</li>
+          <li>Personal data breach response playbook</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="service" id="sdf">
+      <div class="service-meta">
+        <span class="idx">Service Line 03</span>
+        <span class="tag tag-advisory">Advisory</span>
+        <h3>Significant Data Fiduciary (SDF) Advisory</h3>
+      </div>
+      <div class="service-body">
+        <p class="summary">Rule 13 obligations for entities notified as Significant Data Fiduciaries under Section 10, including the annual assessments the Rules require.</p>
+        <ul class="deliverables">
+          <li>Rule 13 obligation mapping and readiness review</li>
+          <li>Annual Data Protection Impact Assessment (DPIA)</li>
+          <li>Independent Data Auditor coordination and audit facilitation</li>
+          <li>Data Protection Officer (DPO) advisory and function set-up</li>
+          <li>Algorithmic and cross-border data-transfer risk review</li>
+          <li>Periodic compliance certification support</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="service" id="retainer">
+      <div class="service-meta">
+        <span class="idx">Service Line 04</span>
+        <span class="tag tag-retainer">Retainer</span>
+        <h3>Ongoing Compliance Retainership</h3>
+      </div>
+      <div class="service-body">
+        <p class="summary">Compliance is a state to be sustained, not a project to be closed. A retainership keeps the programme current as products, vendors and guidance evolve.</p>
+        <ul class="deliverables">
+          <li>Quarterly Board and Committee compliance reporting</li>
+          <li>Regulatory watch — Rules, MeitY guidance and Board circulars</li>
+          <li>Breach-readiness drills and incident response support</li>
+          <li>Annual compliance health check and re-assessment</li>
+          <li>Employee training and awareness programmes</li>
+          <li>On-call advisory for new products, features and vendors</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="service">
+      <div class="service-meta">
+        <span class="idx">Service Line 05</span>
+        <span class="tag tag-advisory">Advisory</span>
+        <h3>Regulatory Overlay Advisory</h3>
+      </div>
+      <div class="service-body">
+        <p class="summary">For regulated entities, DPDP obligations rarely sit in isolation. We map them against existing sectoral requirements so controls don't conflict or duplicate.</p>
+        <ul class="deliverables">
+          <li>DPDP mapping against RBI data-localisation and outsourcing norms</li>
+          <li>DPDP mapping against SEBI cybersecurity and data-governance circulars</li>
+          <li>DPDP mapping against IRDAI data protection guidelines</li>
+          <li>Single consolidated control matrix for internal and Board use</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="service">
+      <div class="service-meta">
+        <span class="idx">Service Line 06</span>
+        <span class="tag tag-implementation">Implementation</span>
+        <h3>Consent Manager Readiness</h3>
+      </div>
+      <div class="service-body">
+        <p class="summary">With Consent Manager registration opening 13 November 2026, Fiduciaries need consent flows built to interoperate with registered Consent Managers ahead of go-live.</p>
+        <ul class="deliverables">
+          <li>Consent Manager interoperability assessment</li>
+          <li>Technical and process readiness review with IT/product teams</li>
+          <li>Migration plan from existing consent capture to the new architecture</li>
+          <li>Testing support ahead of the compliance deadline</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="service" id="tool-licensing">
+      <div class="service-meta">
+        <span class="idx">Service Line 07</span>
+        <span class="tag tag-implementation">Implementation</span>
+        <h3>DPDP Tool Licensing &amp; Implementation</h3>
+      </div>
+      <div class="service-body">
+        <p class="summary">Selection, licensing and hands-on implementation of DPDP compliance software — consent management, data mapping, DSAR and breach-management platforms — so the technology actually operationalises the policies we design, not a separate workstream.</p>
+        <ul class="deliverables">
+          <li>Tool evaluation and shortlisting against your data landscape and budget</li>
+          <li>Licensing negotiation and vendor coordination</li>
+          <li>Implementation and configuration of consent, RoPA and DSAR modules</li>
+          <li>Integration support with existing IT and product systems</li>
+          <li>User training and change management for compliance and IT teams</li>
+          <li>Post-implementation support and licence renewal management</li>
+        </ul>
+
+        <h4 style="font-size:15px;margin:28px 0 6px;color:var(--navy-900);">Typical Platform Capabilities We Implement</h4>
+        <p style="font-size:13.5px;color:var(--ink-soft);margin:0 0 16px;max-width:560px;">Depending on the licensed platform, implementation typically covers the following modules — configured to your organisation structure and processing activities:</p>
+        <div class="cap-grid" style="margin-top:0;">
+          <div class="cap-card">
+            <h4>PII &amp; Data Discovery</h4>
+            <p>Automated scanning to identify and classify personal data across structured and unstructured systems, giving a live view of where personal data actually resides.</p>
+          </div>
+          <div class="cap-card">
+            <h4>Data Mapping &amp; RoPA Automation</h4>
+            <p>Workflow-driven mapping of processing activities that keeps the Record of Processing Activities current as systems and vendors change, rather than a static document.</p>
+          </div>
+          <div class="cap-card">
+            <h4>Consent &amp; Cookie Management</h4>
+            <p>Granular, multilingual consent capture across web and app touchpoints, with cookie scanning, categorisation and a full consent audit trail.</p>
+          </div>
+          <div class="cap-card">
+            <h4>Data Principal Rights (DSAR) Management</h4>
+            <p>Structured intake and workflow automation for access, correction, erasure and grievance requests, with tracked turnaround times.</p>
+          </div>
+          <div class="cap-card">
+            <h4>Breach &amp; Incident Management</h4>
+            <p>Incident logging, risk and impact assessment, and guided workflows for timely notification to the Board, regulator and affected Data Principals.</p>
+          </div>
+          <div class="cap-card">
+            <h4>Third-Party &amp; Vendor Risk Management</h4>
+            <p>Vendor risk assessments, questionnaires and ongoing monitoring to manage Data Processor risk consistently across the vendor base.</p>
+          </div>
+          <div class="cap-card">
+            <h4>Privacy &amp; Impact Assessments</h4>
+            <p>Templated, repeatable DPIA and privacy-assessment workflows mapped to the Act, the Rules and relevant global frameworks.</p>
+          </div>
+          <div class="cap-card">
+            <h4>Compliance Dashboards &amp; Reporting</h4>
+            <p>Centralised, role-based dashboards giving compliance teams and the Board real-time visibility into open items, risk and audit readiness.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section style="background:var(--paper-dim);">
+  <div class="wrap">
+    <div class="eyebrow">Capabilities</div>
+    <h2>What Our Team Builds, Reviews and Runs</h2>
+    <p class="section-lead">Practical capabilities that sit underneath each service line above. Every item is tagged with the service type it's delivered under, so you know what kind of engagement it belongs to.</p>
+
+    <div class="cap-grid">
+      <div class="cap-card">
+        <span class="tag tag-implementation">Implementation</span>
+        <h4>Data Mapping</h4>
+        <p>Structured inventory of personal data across systems, vendors and business functions, including the Record of Processing Activities (RoPA) that sits under it.</p>
+      </div>
+      <div class="cap-card">
+        <span class="tag tag-assessment">Assessment</span>
+        <h4>Clause-Wise Gap Analysis</h4>
+        <p>Line-by-line comparison of current practice against the Act and Rules, rated by regulatory and reputational risk.</p>
+      </div>
+      <div class="cap-card">
+        <span class="tag tag-implementation">Implementation</span>
+        <h4>Notice &amp; Consent Drafting</h4>
+        <p>Plain-language and itemised notices, and consent flows designed to be genuinely free, specific and informed.</p>
+      </div>
+      <div class="cap-card">
+        <span class="tag tag-implementation">Implementation</span>
+        <h4>Vendor &amp; Processor Contracts</h4>
+        <p>Section 8(2)-aligned clauses for Data Processor agreements, since liability stays with the Fiduciary regardless of contract terms.</p>
+      </div>
+      <div class="cap-card">
+        <span class="tag tag-implementation">Implementation</span>
+        <h4>Rights &amp; Grievance Workflows</h4>
+        <p>Operational design for access, correction, erasure and grievance requests, with defined turnaround times.</p>
+      </div>
+      <div class="cap-card">
+        <span class="tag tag-implementation">Implementation</span>
+        <h4>Breach Response Playbooks</h4>
+        <p>Escalation paths, notification templates and Board-reporting triggers for personal data breach events.</p>
+      </div>
+      <div class="cap-card">
+        <span class="tag tag-advisory">Advisory</span>
+        <h4>DPIA Facilitation</h4>
+        <p>Structured Data Protection Impact Assessments for Significant Data Fiduciaries and high-risk processing activities.</p>
+      </div>
+      <div class="cap-card">
+        <span class="tag tag-advisory">Advisory</span>
+        <h4>Independent Audit Coordination</h4>
+        <p>Preparing evidence trails and liaising with Independent Data Auditors ahead of Rule 13 audit cycles.</p>
+      </div>
+      <div class="cap-card">
+        <span class="tag tag-advisory">Advisory</span>
+        <h4>Sectoral Overlay Mapping</h4>
+        <p>Reconciling DPDP obligations with RBI, SEBI and IRDAI requirements into one control matrix.</p>
+      </div>
+      <div class="cap-card">
+        <span class="tag tag-retainer">Retainer</span>
+        <h4>Board &amp; Committee Reporting</h4>
+        <p>Periodic compliance status reporting in the form Boards and Audit Committees expect to see.</p>
+      </div>
+      <div class="cap-card">
+        <span class="tag tag-retainer">Retainer</span>
+        <h4>Regulatory Watch</h4>
+        <p>Ongoing tracking of Rules, MeitY guidance and Data Protection Board orders, translated into action items.</p>
+      </div>
+      <div class="cap-card">
+        <span class="tag tag-retainer">Retainer</span>
+        <h4>Training &amp; Awareness</h4>
+        <p>Role-based training for product, engineering, HR and customer-facing teams on data-handling obligations.</p>
+      </div>
+      <div class="cap-card">
+        <span class="tag tag-implementation">Implementation</span>
+        <h4>DPDP Tool Licensing &amp; Implementation</h4>
+        <p>Evaluation, licensing and configuration of consent, RoPA, DSAR and breach-management platforms, integrated with existing IT systems.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Why Mehta &amp; Mehta</div>
+    <h2>How These Services Are Delivered</h2>
+    <div class="why-row">
+      <div class="item">
+        <h4>Governance-first</h4>
+        <p>Every service is framed as a Board obligation, consistent with our practice as Company Secretaries and Chartered Accountants.</p>
+      </div>
+      <div class="item">
+        <h4>Senior Partner-led</h4>
+        <p>One Senior Partner owns each engagement end to end, backed by a team of 150-plus professionals.</p>
+      </div>
+      <div class="item">
+        <h4>Audit-ready by default</h4>
+        <p>Deliverables are built to withstand review by an Independent Data Auditor or the Board — not just to pass internally.</p>
+      </div>
+      <div class="item">
+        <h4>Modular engagement</h4>
+        <p>Take a single service line or the full lifecycle. Nothing here requires committing to more than you need today.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="tight">
+  <div class="wrap">
+    <div class="cta-band">
+      <div>
+        <h3>Not sure which service line applies to you?</h3>
+        <p>Most engagements begin with a short conversation, not a proposal. Tell us where you are and we'll point to the right starting service.</p>
+      </div>
+      <div class="cta-actions">
+        <a class="btn-primary" href="contact.html">Contact Us</a>
+        <a class="btn-ghost" style="border-color:rgba(255,255,255,.32);" href="dpdp-act.html">Understand the Act First</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">MEHTA &amp; MEHTA</div>
+        <p class="foot-tag">Corporate · Legal · Secretarial · Financial Advisory. Trusted advisors since 1990.</p>
+      </div>
+      <div>
+        <h5>Site</h5>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="dpdp-act.html">The DPDP Act</a>
+        <a href="engagement.html">Engagement Model</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <p style="font-size:14px;margin:0 0 10px;">201-206, Shiv Smriti Chambers, Dr. Annie Besant Road, Worli, Mumbai – 400 018</p>
+        <p style="font-size:14px;margin:0 0 6px;">+91 22 6611 9696 / 6611 9601</p>
+        <p style="font-size:14px;margin:0;">info@mehta-mehta.com</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      © 2026 Mehta &amp; Mehta, Company Secretaries. All rights reserved. This site is for general information only and does not constitute legal or professional advice.
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

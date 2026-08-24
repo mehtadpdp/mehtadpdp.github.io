@@ -70,4 +70,20 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
   }
+
+  var dropdown = document.querySelector('.nav-item-dropdown');
+  var dropdownToggle = document.querySelector('.dropdown-toggle');
+  if (dropdown && dropdownToggle) {
+    dropdownToggle.addEventListener('click', function (e) {
+      e.preventDefault();
+      var isOpen = dropdown.classList.toggle('open');
+      dropdownToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    document.addEventListener('click', function (e) {
+      if (!dropdown.contains(e.target)) {
+        dropdown.classList.remove('open');
+        dropdownToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
 });
