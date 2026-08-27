@@ -90,6 +90,11 @@ document.addEventListener('DOMContentLoaded', function () {
   var contactForm = document.getElementById('contact-form');
   if (contactForm) {
     var CONTACT_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzmujmmHR__Lxsiu6-Ocd6A5tvOX2T5iP9FXkzYz3ksH-zVPePgASDJL987BKUNlen4jg/exec';
+    var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    var setStatus = function (status, text, type) {
+      status.textContent = text;
+      status.className = 'form-status' + (type ? ' ' + type : '');
+    };
     contactForm.addEventListener('submit', function (e) {
       e.preventDefault();
       var name = document.getElementById('cf-name').value.trim();
@@ -98,10 +103,14 @@ document.addEventListener('DOMContentLoaded', function () {
       var status = document.getElementById('cf-status');
       var submitBtn = contactForm.querySelector('button[type="submit"]');
       if (!name || !email || !message) {
-        status.textContent = 'Please fill in all fields.';
+        setStatus(status, 'Please fill in all fields.', 'error');
         return;
       }
-      status.textContent = 'Sending...';
+      if (!emailPattern.test(email)) {
+        setStatus(status, 'Please enter a valid email address.', 'error');
+        return;
+      }
+      setStatus(status, 'Sending...', null);
       submitBtn.disabled = true;
       fetch(CONTACT_SCRIPT_URL, {
         method: 'POST',
@@ -110,11 +119,11 @@ document.addEventListener('DOMContentLoaded', function () {
       })
         .then(function (res) { return res.json(); })
         .then(function () {
-          status.textContent = 'Thank you. Your enquiry has been sent.';
+          setStatus(status, 'Thank you. Your enquiry has been sent.', 'success');
           contactForm.reset();
         })
         .catch(function () {
-          status.textContent = 'Something went wrong. Please try again or email us directly.';
+          setStatus(status, 'Something went wrong. Please try again or email us directly.', 'error');
         })
         .finally(function () {
           submitBtn.disabled = false;
