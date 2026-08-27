@@ -86,4 +86,39 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   }
+
+  var contactForm = document.getElementById('contact-form');
+  if (contactForm) {
+    var CONTACT_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzmujmmHR__Lxsiu6-Ocd6A5tvOX2T5iP9FXkzYz3ksH-zVPePgASDJL987BKUNlen4jg/exec';
+    contactForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var name = document.getElementById('cf-name').value.trim();
+      var email = document.getElementById('cf-email').value.trim();
+      var message = document.getElementById('cf-message').value.trim();
+      var status = document.getElementById('cf-status');
+      var submitBtn = contactForm.querySelector('button[type="submit"]');
+      if (!name || !email || !message) {
+        status.textContent = 'Please fill in all fields.';
+        return;
+      }
+      status.textContent = 'Sending...';
+      submitBtn.disabled = true;
+      fetch(CONTACT_SCRIPT_URL, {
+        method: 'POST',
+        body: JSON.stringify({ name: name, email: email, message: message }),
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' }
+      })
+        .then(function (res) { return res.json(); })
+        .then(function () {
+          status.textContent = 'Thank you. Your enquiry has been sent.';
+          contactForm.reset();
+        })
+        .catch(function () {
+          status.textContent = 'Something went wrong. Please try again or email us directly.';
+        })
+        .finally(function () {
+          submitBtn.disabled = false;
+        });
+    });
+  }
 });

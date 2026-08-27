@@ -72,9 +72,22 @@
         <span class="eyebrow">Get in Touch</span>
         <h2>Write to Us</h2>
         <p>For enquiries regarding DPDP compliance advisory, write to our Data Protection &amp; Privacy team.</p>
-        <div>
-          <a href="mailto:info@mehta-mehta.com?subject=DPDP%20Advisory%20Enquiry" class="btn btn-primary">Email info@mehta-mehta.com</a>
-        </div>
+        <form id="contact-form" novalidate>
+          <div class="form-field">
+            <label for="cf-name">Name</label>
+            <input type="text" id="cf-name" name="name" required>
+          </div>
+          <div class="form-field">
+            <label for="cf-email">Your Email</label>
+            <input type="email" id="cf-email" name="email" required>
+          </div>
+          <div class="form-field">
+            <label for="cf-message">Message</label>
+            <textarea id="cf-message" name="message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Enquiry</button>
+          <p id="cf-status" style="font-size:0.82rem;color:var(--gray-600);margin-top:12px;"></p>
+        </form>
         <div class="callout" style="margin-top:24px;">
           <h4>Start With a Diagnostic</h4>
           <p style="margin-bottom:0;">Most engagements begin with a Phase I gap assessment.
